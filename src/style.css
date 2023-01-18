@@ -1,0 +1,753 @@
+*{
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav{
+    background-color: rgb(25, 26, 27);
+    color: white;   /* makes all text in the container white */
+    padding: 2px 40px;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between; /* main axis styling */
+    align-items: center;    /* cross axis styling */
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+
+.logoYeezy{
+    width: 90px;
+    max-height: 100%;
+    transform: rotate(15deg);
+}
+
+.header{
+    margin-left: -15px;
+    margin-bottom: 5px;
+}
+
+.search{
+    display:flex;
+    align-items: center;
+    background-color: gray;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.searchInput{
+    border: none;
+    background-color: transparent;
+}
+
+.searchInput::placeholder{
+    color: white;
+}
+
+nav .sale{
+    font-size: 20px;
+    /* text-decoration: underline;
+    text-decoration-color: gray; */
+    border-bottom: 2px solid rgb(178, 245, 204);
+    cursor: pointer;
+}
+
+.bottom{
+    padding-bottom: 17px;
+}
+
+.choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+li{
+    margin-right: 45px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.767);
+    font-size:1.1em;
+    font-weight: 400;
+}
+
+.slider{
+    background: url(https://images.unsplash.com/photo-1527066236128-2ff79f7b9705?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80);
+    background: url(https://images.unsplash.com/photo-1486067267320-cd91ee9ef64c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+    /* background: url(https://images.unsplash.com/photo-1533135091724-62cc5402aa20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80); */
+    /* background: url(https://images.unsplash.com/photo-1504672281656-e4981d70414b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80); */
+    /* background: url(https://images.unsplash.com/photo-1546864909-fb2cb357c00a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80); */
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%); */
+    /* Full height */
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.yeezyImg{
+    transform: rotate(30deg);
+}
+
+.yeezyImg2{
+    transform: rotate(30deg);
+    margin-top: 100px;
+}
+
+.af1Img{
+    transform: rotate(27deg);
+}
+
+.sliderWrapper{
+    display: flex;
+    width: 500vw;
+  
+    transition: all 1s ease-in-out;
+}
+
+.sliderItem{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.sliderImg{
+    z-index: 1;
+}
+
+.slideBg{
+    width: 600px;
+    height: 600px;
+    display: flex;
+    background-color: rgb(220, 228, 220);
+    border-radius: 10%;
+    position: absolute;
+}
+
+/* @learning-objective: 
+- "position" is used to move elements in the screen
+- position is relative to the parent 
+- position is absolute in the child */
+.sliderTitle{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 60px;
+    font-weight: 800;
+    text-align: center;
+    color: rgb(87, 85, 85);
+    z-index: 1;
+ }
+
+ .sliderPrice{
+     position: absolute;
+     top: 15%;
+     left: 25%;
+     font-size: 35px;
+     font-weight: 400;
+     padding: 0.3em;
+     border: 2px solid rgb(19, 141, 37);
+     border-radius: 15%;
+     color:rgb(19, 141, 37);
+     z-index: 1;
+ }
+
+ .buyButton{
+     position: absolute;
+     z-index: 1;
+     top: 45%;
+     right: 16.5%;
+     padding: 1em;
+     border-color: rgb(0, 0, 0);
+     color: rgb(255, 255, 255);
+     font-weight: 1000;
+     font-size: 1.2em;
+     border-radius: 10px;
+     cursor: pointer;
+     background-color: rgb(87, 85, 85);
+ }
+
+.buyButton:hover{
+    background-color: white;
+    color: rgb(87,85,85);
+}
+
+/* individual sliderItem styling */
+
+.sliderItem:nth-child(2) .sliderTitle {
+    right: 14.5%;
+}
+.sliderItem:nth-child(2) .slideBg {
+    /* background-color:rgb(207, 229, 235); */
+    background-color:rgb(221, 231, 226);
+}
+.sliderItem:nth-child(2) .sliderImg {
+    padding-left: 40px;
+    padding-bottom: 70px;
+ }
+
+.sliderItem:nth-child(3) .sliderTitle {
+    right: 11.6%;
+}
+.sliderItem:nth-child(3) .slideBg {
+    background-color:rgb(213, 217, 219);
+}
+.sliderItem:nth-child(3) .sliderImg {
+   padding-left: 40px;
+   padding-bottom: 70px;
+}
+
+.sliderItem:nth-child(4) .sliderTitle {
+    right: 13.8%;
+}
+.sliderItem:nth-child(4) .slideBg {
+    background-color:rgb(220, 231, 212);
+}
+
+.sliderItem:nth-child(5) .sliderTitle {
+    right: 11%;
+}
+.sliderItem:nth-child(5) .slideBg {
+    background-color:rgb(214, 231, 222);
+}
+
+.features{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin:50px;
+}  
+
+.features{
+   text-align: center;
+}
+
+/* so far, this is the best way to resize images */
+.featureIcon{
+    width: 50px;
+    max-height: 100%;
+}
+
+.feature h2{
+    font-size: 20px;
+    margin: 20px;
+} 
+
+.featureDescription{
+    color: grey;
+}
+
+/* why not just use display:flex & margins to style this instead of position+top/right?? */
+.product{
+    height: 100vh;
+    background-color: rgb(243, 243, 243);
+    position: relative;
+}
+
+.productImg{
+    width: 45%;
+}
+
+.productDetails{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 40%;
+    padding: 100px;
+}
+
+.productTitle{
+    font-size: 70px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.productPrice{
+    margin-bottom: 15px;
+}
+
+.productDescription{
+    color: gray;
+    margin-bottom: 25px;
+    width: 70%;
+}
+
+.productColours{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.colourBox{
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: black;
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+.colourBox:nth-child(2){
+    background-color: blue;
+}
+
+.productSizes{
+    display: flex;
+    /* why not? */
+    /* justify-content: space-between; */ 
+    margin-bottom: 15px;
+    margin-left: 80px;
+}
+
+.sizeBox{
+    border: solid 1px black;
+    font-weight: 500;
+    margin-right: 20px;
+    padding: 5px 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+  
+.productButton{
+    margin-left: 280px;
+    float: center;
+    padding : 10px 20px;
+    border-radius: 10px;
+    background-color:dark-gray;
+    color: black;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.productButton:hover{
+    font-weight: 1000;
+    padding : 13px 23px;
+    border: 2px solid black;
+}
+
+.sizeBox:hover{
+    font-weight: 1000;
+}
+
+.iFramerWrapper{
+   background-color: red;
+   width: 10px;
+   height: 10px;
+   border: 4px solid black;
+}
+
+.iFrameWrapper{
+    padding: 10px;
+    margin-top: 40px;
+    display: inline-block;
+    border: 1px solid black;
+    background: white;
+    box-shadow: 30% 50%;
+    opacity: 60%;
+}
+
+.iFrameWrapper:hover{
+    opacity: 100%;
+    transition: opacity 2s;
+}
+
+.iFrameWrapper p{
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.paymentModal {
+    width: 500px;
+    height: 570px;
+    position: absolute;
+    background-color: white;
+    /* centers the element */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* ------------------- */
+    padding: 20px 50px;
+    border-radius: 1%;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 1px 1px 15px 3px rgba(0,0,0,0.59); 
+    box-shadow: 1px 1px 15px 3px rgba(0,0,0,0.59);
+
+    /* don't display by default */
+    display: none;
+}
+
+.personalInfoTitle {
+    color: gray;
+    opacity: 0.4;
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+
+label {
+    font-weight: 300;
+    font-size: 0.9em;
+}
+
+.inputPersonalInfo {
+    padding: 7px 5px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid;
+}
+
+input::placeholder {
+    opacity: 0.4;
+}
+
+.cardImgs {
+    display: flex;
+    width: 10%;
+    height: 10%;
+}
+
+.cardImgs img {
+    padding-right: 10px;
+}
+
+.cardInfoTitle {
+    color: gray;
+    opacity: 0.4;
+    font-size: 25px;
+    padding-top: 7px;
+    /* padding-bottom: 5px; */
+}
+
+.inputCardName {
+    border: none;
+    border-bottom: 1px solid;
+    padding: 7px 5px;
+    margin-top : 3px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+.inputCardNumber {
+    border: none;
+    border-bottom: 1px solid;
+    padding: 7px 0px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+}
+
+.cardInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputCardInfo {
+    border: none;
+    border-bottom: 1px solid;
+    padding: 7px 0px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.checkoutButton {
+    margin-top: 20px;
+    height: 40px;
+    color: white;
+    background-color:rgb(37, 120, 214);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(223, 222, 222);
+    height: 23px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.titleSection {
+    margin-top: 50px;
+    margin-left: 120px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.titleSection h1 {
+    font-weight: 200;
+    opacity: 0.8;
+}
+
+
+.gallerySection {
+    margin-left: 180px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+}
+
+.imgContainer{
+    width: 33.3%;
+   
+}
+
+.imgContainer:nth-child(2) {
+    padding: 0 100px;
+}
+
+.galleryImg {
+    width: 450px;
+    height: auto;
+    opacity: 0.75;
+}
+
+.galleryImg2 {
+    width: 350px;
+    height: auto;
+    opacity: 0.75;
+}
+
+.customSection{
+    background-color: rgb(241, 241, 241);
+    margin-top: 150px;
+    padding-top: 70px;
+    padding-bottom: 100px;
+    padding-left: 80px;
+    position: relative;
+}
+
+.customHeader {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.customLogo {
+    display: flex;
+    margin-left: -60px;
+    margin-top: -50px;
+    background-color: rgb(185, 182, 182);
+    border-radius: 10px;
+    padding: 0 10px;
+     -webkit-box-shadow: 1px 1px 15px 3px rgba(0,0,0,0.59); 
+    box-shadow: 1px 1px 15px 3px rgba(0,0,0,0.59);
+}
+
+.customLogo h1 {
+    margin-top: 35px;
+    font-weight: 600;
+    color: white;
+    font-size: 18px;
+}
+
+.customTitle {
+    margin-left: 540px;
+    font-weight: 300;
+    color: rgb(143, 142, 142);
+}
+
+.customContainerWrapper { 
+    display: flex;
+}
+
+.customContainer {
+    width: 33.3%;
+}
+
+.customContainer img {
+    width: 380px;
+    height: 400px;
+    opacity: 0.8;
+    border: 5px solid rgb(197, 193, 193);
+    border-radius: 10px;
+}
+
+.customDescription {
+    border: 1px solid rgb(194, 190, 190);
+    border-radius: 10px;
+    width: fit-content;
+    margin-left: 540px;
+    margin-top: 40px;
+    padding: 15px;
+   
+}
+
+.description {
+    font-weight: 500;
+    color: rgb(117, 116, 116);
+}
+
+.bookNow {
+    margin-top: 20px;
+    margin-left: 260px;
+    cursor: pointer;
+    padding : 10px 20px;
+    border-radius: 10px;
+    background-color:dark-gray;
+    color: black;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.bookNow:hover {
+    font-weight: 1000;
+    padding : 13px 23px;
+    border: 2px solid black;
+}
+
+
+.bookNowModal {
+    width: 500px;
+    height: 570px;
+    position: absolute;
+    background-color: white;
+    /* centers the element */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* ------------------- */
+    padding: 20px 50px;
+    border-radius: 1%;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 1px 1px 15px 3px rgba(0,0,0,0.59); 
+    box-shadow: 1px 1px 15px 3px rgba(0,0,0,0.59);
+
+    /* don't display by default */
+    display: none;
+}
+
+.shoeImg {
+    margin: 5px 0;
+    display: flex;
+    width: 10%;
+    height: 10%;
+}
+
+.shoeImg img {
+    padding-right: 10px;
+}
+
+.dropdown {
+    margin: 15px 0;
+    color: grey;
+    cursor: pointer;
+}
+
+.closeButton2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(223, 222, 222);
+    height: 23px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+footer {
+    padding: 50px 0;
+    padding-left: 80px;
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    color: rgb(73, 70, 70);
+}
+
+footer h1 {
+    font-weight: 800;
+    font-size: 16px; 
+}
+
+.left {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerTitle {
+    margin-bottom: 20px;
+}
+
+.footerLi{
+    list-style: none;
+    padding-bottom: 17px;
+    color: rgb(58, 57, 57);
+    font-size: 15px;
+}
+
+.sneakAPeek {
+    padding: 20px;
+    margin-top:50px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.right {
+    flex: 1;
+    margin-left: 300px;
+}
+
+.socials h1 {
+    padding-bottom: 8px;
+}
+
+.socials img {
+    width: 40px;
+    padding-right: 10px;
+    
+}
+
+.acceptedPayments h1 {
+    padding-top: 10px;
+    padding-bottom: 7px;
+}
+
+.acceptedPayments img {
+    width: 50px;
+    padding-right: 10px;
+}
+
+.stores {
+    display: flex;
+    margin-top: -20px;
+}
+
+.stores img:nth-child(1) {
+    width: 120px;
+}
+.stores img:nth-child(2) {
+    width: 130px;
+}
+.copyright {
+    color: rgb(141, 141, 141);
+}
